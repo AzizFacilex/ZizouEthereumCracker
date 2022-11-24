@@ -4,7 +4,7 @@ First Install The Packages :
 ```
 pip install -r requirements.txt
 ```
-* Download The Ethereum Wallet Addresses Containing +10M Valid Addresses HERE: []
+* Download The Ethereum Wallet Addresses Containing +10M Valid Addresses HERE: [https://bit.ly/ethadresses]
 * Create Folder `/DbAddresses` and put in the downloaded addresses
 * Run the program Encryption/GenerateEncryptionKeys.py to generate your Public and Private Keys
 * create your .env File and store your Private Data. .env File should look like the following:
