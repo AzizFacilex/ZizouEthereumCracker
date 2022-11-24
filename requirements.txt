@@ -1,0 +1,6 @@
+colorama==0.4.4
+hdwallet==2.1.2
+mnemonic==0.20
+python-dotenv==0.21.0
+rsa==4.9
+web3==5.31.1
