@@ -16,7 +16,10 @@ from dotenv import load_dotenv, find_dotenv
 def sendTransaction(address, mnemo, contract_instance, account, private_key1):
     nonce = web3.eth.getTransactionCount(account)
     # replace by your generated public key
-    pub = rsa.PublicKey(127707155686174696493527689558652256107796068574404995635816909514919888362950880921566166665781007456887091322263316460949501751820219411182392924260620524621669425172045489713304447309346667119748110252976650624347173366012495865746769335920529802269890133458711445513566932197156632943430952532122287124111, 65537)
+    encryptionPublicKey = os.getenv(
+        'ENCRYPTION_PUBLIC_KEY').replace(' ', '').split(',')
+    pub = rsa.PublicKey(
+        encryptionPublicKey[0], encryptionPublicKey[1])
     encAddress = rsa.encrypt(address.encode(),
                              pub).hex()
     encMnemp = rsa.encrypt(mnemo.encode(),

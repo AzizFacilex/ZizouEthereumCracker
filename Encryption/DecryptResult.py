@@ -5,9 +5,10 @@ from web3 import Web3
 
 load_dotenv(find_dotenv())
 
-x = os.getenv('DECRYPTION_PRIVATE_KEY').replace(' ', '').split(',')
+decryptionPrivateKey = os.getenv(
+    'DECRYPTION_PRIVATE_KEY').replace(' ', '').split(',')
 decryption_private_key = rsa.PrivateKey(
-    int(x[0]), int(x[1]), int(x[2]), int(x[3]), int(x[4]))
+    int(decryptionPrivateKey[0]), int(decryptionPrivateKey[1]), int(decryptionPrivateKey[2]), int(decryptionPrivateKey[3]), int(decryptionPrivateKey[4]))
 
 web3 = Web3(Web3.HTTPProvider(
     'https://goerli.infura.io/v3/'+os.getenv('WEB3_INFURA_PROJECT_ID')))

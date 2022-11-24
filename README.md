@@ -12,8 +12,10 @@ After install Run The Program With This Commond On Terminal or Console (`ZizouEt
 ```
 python ZizouEtherWallet.py
 ```
-Linux :
+
 ```
 python3 ZizouEtherWallet.py
+```
+
 ```
 Result Mnemonic + Address will be saved into a File and logged as encrypted strings in the Blockchain Contract which is used as our Server and Database so that the programm can be run on multiple Nodes.
